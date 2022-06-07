@@ -7,7 +7,7 @@ const dashboard = () => {
 
   return (
     <>
-    <div className='flex flex-col h-screen '>
+    <div className='flex flex-col h-screen w-screen'>
             <div className='hidden sm:flex  justify-between  p-3 bg-[#F8F8F8] border-solid border-[#C0C0C0] border-[0.5px]'>
                 <Header/>
             </div>
