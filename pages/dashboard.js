@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import LeftSidebar from '../components/LeftSidebar'
 import RightSidebar from '../components/RightSidebar'
 
-const dashboard = () => {
+const Dashboard = () => {
 
   return (
     <>
@@ -34,4 +34,4 @@ const dashboard = () => {
   )
 }
 
-export default dashboard
+export default Dashboard
