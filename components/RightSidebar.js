@@ -39,12 +39,12 @@ const RightSidebar = () => {
 
     return (
         <>
-            <div className='bg-white basis-[25rem]'>
+            
                 <div className='flex flex-col '>
                     <div className='p-3 px-5 text-sm font-semibold text-blue-500 hover:text-blue-700 cursor-pointer' >Property Settings</div>
                 </div>
                 <div>
-                        <div className='border-0 border-y border-solid border-gray-300 py-2 px-5 flex gap-2 items-center cursor-pointer' onClick={hideGeneral}>
+                        <div className={`${general===""?"border-b-0 border-t":"border-0 border-y border-solid"} border-gray-300 py-2 px-5 flex gap-2 items-center cursor-pointer`} onClick={hideGeneral}>
                             <span  className={`${general==="show"?"rotate-180":""} transition-all duration-500 `}> <DownArrow /></span><h4 className='m-0 text-m font-bold ' >General</h4>
                            
                         </div>
@@ -64,8 +64,8 @@ const RightSidebar = () => {
                         }
                 </div>
                 <div>
-                    <div className='border-0 border-y border-solid border-gray-300 py-2 px-5 flex gap-2 items-center cursor-pointer'>
-                        <span onClick={hideText} className={`${text==="show"?"rotate-180":""} transition-all duration-500 `}><DownArrow/></span><h4 className='m-0 text-m font-bold ' >Text</h4>
+                    <div className={`${text===""?"border-b-0 border-t":"border-0 border-y border-solid"} border-gray-300 py-2 px-5 flex gap-2 items-center cursor-pointer`} onClick={hideText}>
+                        <span  className={`${text==="show"?"rotate-180":""} transition-all duration-500 `}><DownArrow/></span><h4 className='m-0 text-m font-bold ' >Text</h4>
                         </div>
                         {text === "show"?
                         <form>
@@ -90,8 +90,8 @@ const RightSidebar = () => {
                         </form>:<div></div>}
                 </div>
                 <div>
-                    <div className='border-0 border-y border-solid border-gray-300 py-2 px-5 flex gap-2 items-center cursor-pointer'>
-                    <span onClick={hideConstraints}  className={`${constraints==="show"?"rotate-180":""} transition-all duration-500 `}><DownArrow/></span><h4 className='m-0 text-m font-bold ' >Constraints </h4>
+                    <div className={`${constraints===""?"border-b-none":""}border-0 border-y border-solid border-gray-300 py-2 px-5 flex gap-2 items-center cursor-pointer`} onClick={hideConstraints}>
+                    <span   className={`${constraints==="show"?"rotate-180":""} transition-all duration-500 `}><DownArrow/></span><h4 className='m-0 text-m font-bold ' >Constraints </h4>
                         </div>
                         {constraints === "show"?
                         <form>
@@ -111,7 +111,6 @@ const RightSidebar = () => {
                         </div>
                         </form>:<div></div>}
                 </div>
-            </div>
         </>
     )
 }

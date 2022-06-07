@@ -21,7 +21,7 @@ const LeftSidebar = () => {
 
   return (
     <>
-      <div className='bg-white  basis-[25rem]'>
+
           <div className='flex  p-3 border-solid border-[#C0C0C0] border-b border-b-1'>
               <div className={`${build ==="build"?"text-blue-400 fill-blue-400":"text-[#787878] fill-gray-500"} flex px-3 font-[700]  cursor-pointer hover:text-blue-400 hover:fill-blue-400`}>
                 <Build/><p className='ml-1' onClick={buildfunc}>Build</p></div>
@@ -58,7 +58,6 @@ const LeftSidebar = () => {
             this is items section
           </div>:<div></div>
           }
-      </div>
     </>
   )
 }
